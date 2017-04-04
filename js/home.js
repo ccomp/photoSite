@@ -1,4 +1,4 @@
-var vis = ["theFig"];
+var vis = [];
 
 function makeVisible(x)
 {
@@ -6,6 +6,7 @@ function makeVisible(x)
 	var y = document.getElementById(x);
 	if (vis.length > 0) {
 		for (var i = 0; i < vis.length; i++) {
+			y.style.opacity = 1;
 			y.style.display = 'block';
 			var z = document.getElementById(vis[i]);
 			var timer = setInterval(function () {
@@ -13,20 +14,27 @@ function makeVisible(x)
 				{
 					clearInterval(timer);
 					z.style.display = 'none';
-					z.style.visibility = 'hidden';
-					y.style.visibility = 'visible';
+					z.style.opacity = 1;
 				}
 				z.style.opacity = op;
 				z.style.filter = 'alpha(opacity=' + op * 100 + ")";
 			    op -= op * 0.1;
 			}, 50);
+			op = 1;
+			vis.splice(i, 1);
 		}
 	} else {
 		y.style.display = 'block';
-		y.style.visibility = 'visible';
+		y.style.opacity = 1;
+		y.style.filter = '';
 	}
-	vis = [x];
+	vis.push(x);
 }
+
+window.onload = function init()
+{
+	vis = ["intro"];
+};
 
 /*
 

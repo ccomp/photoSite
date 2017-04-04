@@ -10,7 +10,7 @@ body
 	background-color: #33383b;
 }
 
-.intro
+#intro
 {
 	position: absolute;
 	top: 100px;
@@ -19,7 +19,7 @@ body
 	padding: 10px;
 }
 
-.intro h1
+#intro h1
 {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 72px;
@@ -99,12 +99,15 @@ header figure figcaption
 }
 
 .navArticle
-{
+{	
+	position: absolute;
+	background-color: #003D5C;
 	max-width: 50%;
-	color: white;
-	display: block;
+	color: #FDEEA7;
 	margin: auto;
-	padding-top: 100px;
+	top: 100px;
+	left: 30px;
+	padding: 20px;
 	display: none;
 }
 
