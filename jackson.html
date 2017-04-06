@@ -2,49 +2,41 @@
 <html>
 <head>
 	<title>Jackson, Wyoming</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function() {
+		    $(".rslides").responsiveSlides({
+		    	auto: false,
+		    	pager: true
+		    });
+	  	});
+	</script>
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<section id="banner">
-		<img src="#" id = bannerImage>
-	</section>
 	<nav id="topMenu">
 		<ul>
 			<li>
 				<a href="index.html">Home</a>
 			</li>
 			<li>
-				<a href="euro.html">Europe, 2012</a>
+				<a href="#" onclick="makeVisible('euro')">Europe, 2012</a>
 			</li>
 			<li>
-				<a href="jackson.html">Jackson WY, 2014</a>
+				<a href="#" onclick="makeVisible('intro')">Jackson WY, 2014</a>
 			</li>
 			<li>
-				<a href="tokyo.html">Tokyo, Japan, 2014</a>
+				<a href="#" onclick="makeVisible('tokyo')">Tokyo, Japan, 2014</a>
 			</li>
 			<li>
-				<a href="czech.html">Czech Republic, 2016</a>
+				<a href="#" onclick="makeVisible('czech')">Czech Republic, 2016</a>
 			</li>
 		</ul>
 	</nav>
 	<header>
-
-		<!-- <section id="slideshowContainer">
-			<figure id="slideshow">
-				<img src="#" id="currentPicture">
-				<figcaption id="currentPictureCaption">
-					Will insert caption text depending current picture using Javascript.
-				</figcaption>
-			</figure>
-		</section>
-
-		<article id = "about">
-			<h3>
-				Welcome to my photography site! My name is Cyron Completo. I am a BS-TAM major at the University of Colorado, Boulder. My photography is intended to capture my emotional state at certain segments of my life while showing the cultural and visual differences of the places involved.
-			</h3>
-		</article> -->
 
 		<article id = "euro" class="navArticle">
 			<h3>
@@ -66,8 +58,7 @@
 				The photos can be found <a href="#">here</a>.
 			</h3>
 		</article>
-		<section class="intro">
-		<!-- <div id="introBox"></div> -->
+		<section id="intro">
 			<h1>A summer in Jackson</h1>
 		</section>
 		
@@ -77,9 +68,12 @@
 	<!-- idea: bubble images up whenever a slideshow next element is pressed -->
 	<!-- conditional for background-image -->
 	<section class="vertImage">
-		<!-- <figure>
-			<img src="img/cliffs.jpg">
-		</figure> -->
+		<figure>
+			<ul class="rslides">
+				<li><img src="img/cliffs.jpg" alt="Aerial view of the Canyonlands in Utah"></li>
+				<li><img src="img/euro/placeholder.jpg" alt="placeholder"></li>
+			</ul>
+		</figure>
 		<figcaption>
 			<p>
 				I spent the summer before college in Jackson Hole, Wyoming with my aunt, uncle, and cousin. I worked the entire time as a bellman/valet at a mountain resort called the Teton Mountain Lodge and Spa. On my off time, I explored nature: Snow King, Yellowstone, the Teton Mountain Range, and more were explored. 
